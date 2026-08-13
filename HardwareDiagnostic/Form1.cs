@@ -445,5 +445,10 @@ Prompt สำหรับ AI / Support Review
             MessageBox.Show(ex.Message, "Export failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
+
+    private void txtApprovalCriteria_TextChanged(object sender, EventArgs e)
+    {
+
+    }
 }
 
