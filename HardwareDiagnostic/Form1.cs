@@ -450,5 +450,10 @@ Prompt สำหรับ AI / Support Review
     {
 
     }
+
+    private void txtRequestReason_TextChanged(object sender, EventArgs e)
+    {
+
+    }
 }
 

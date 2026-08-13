@@ -48,553 +48,341 @@ partial class Form1
 
     private void InitializeComponent()
     {
-        this.components = new System.ComponentModel.Container();
-
-        this.lblTitle = new System.Windows.Forms.Label();
-        this.lblSubtitle = new System.Windows.Forms.Label();
-
-        this.grpComputer = new System.Windows.Forms.GroupBox();
-        this.lblComputerName = new System.Windows.Forms.Label();
-        this.lblUserName = new System.Windows.Forms.Label();
-        this.lblComputerValue = new System.Windows.Forms.Label();
-        this.lblUserValue = new System.Windows.Forms.Label();
-
-        this.btnStart = new System.Windows.Forms.Button();
-        this.btnStop = new System.Windows.Forms.Button();
-        this.btnGenerateReport = new System.Windows.Forms.Button();
-        this.btnExportJson = new System.Windows.Forms.Button();
-        this.lblElapsedTime = new System.Windows.Forms.Label();
-        this.lblRecommendation = new System.Windows.Forms.Label();
-        this.timerElapsed = new System.Windows.Forms.Timer(this.components);
-
-        this.lblStatus = new System.Windows.Forms.Label();
-        this.progressBar = new System.Windows.Forms.ProgressBar();
-
-        this.grpResult = new System.Windows.Forms.GroupBox();
-        this.txtResult = new System.Windows.Forms.TextBox();
-        this.lblRequestReason = new System.Windows.Forms.Label();
-        this.txtRequestReason = new System.Windows.Forms.TextBox();
-        this.lblRequestId = new System.Windows.Forms.Label();
-        this.txtRequestId = new System.Windows.Forms.TextBox();
-        this.lblApprovalCriteria = new System.Windows.Forms.Label();
-        this.txtApprovalCriteria = new System.Windows.Forms.TextBox();
-        this.btnExportTxt = new System.Windows.Forms.Button();
-
-        this.grpComputer.SuspendLayout();
-        this.grpResult.SuspendLayout();
-        this.SuspendLayout();
-
-        // ==========================================
-        // FORM
-        // ==========================================
-
-        this.AutoScaleMode =
-            System.Windows.Forms.AutoScaleMode.Font;
-
-        this.ClientSize =
-            new System.Drawing.Size(900, 860);
-
-        this.MinimumSize =
-            new System.Drawing.Size(900, 860);
-
-        this.StartPosition =
-            System.Windows.Forms.FormStartPosition.CenterScreen;
-
-        this.Text =
-            "AIS SERVICECENTER";
-
-        // ==========================================
-        // TITLE
-        // ==========================================
-
-        this.lblTitle.AutoSize = true;
-
-        this.lblTitle.Font =
-            new System.Drawing.Font(
-                "Segoe UI",
-                20F,
-                System.Drawing.FontStyle.Bold);
-
-        this.lblTitle.Location =
-            new System.Drawing.Point(30, 25);
-
-        this.lblTitle.Text =
-            "AIS SERVICECENTER DIAGNOSTIC TOOL";
-
-        // ==========================================
-        // SUBTITLE
-        // ==========================================
-
-        this.lblSubtitle.AutoSize = true;
-
-        this.lblSubtitle.Font =
-            new System.Drawing.Font(
-                "Segoe UI",
-                10F);
-
-        this.lblSubtitle.ForeColor =
-            System.Drawing.Color.DimGray;
-
-        this.lblSubtitle.Location =
-            new System.Drawing.Point(34, 65);
-
-        this.lblSubtitle.Text =
-            "Computer Performance & Hardware Assessment";
-
-        // ==========================================
-        // COMPUTER INFORMATION
-        // ==========================================
-
-        this.grpComputer.Location =
-            new System.Drawing.Point(30, 105);
-
-        this.grpComputer.Size =
-            new System.Drawing.Size(840, 105);
-
-        this.grpComputer.Text =
-            "Computer Information";
-
-        // Computer Name label
-
-        this.lblComputerName.AutoSize = true;
-
-        this.lblComputerName.Location =
-            new System.Drawing.Point(20, 30);
-
-        this.lblComputerName.Text =
-            "Computer Name:";
-
-        // Computer Name value
-
-        this.lblComputerValue.AutoSize = true;
-
-        this.lblComputerValue.Location =
-            new System.Drawing.Point(150, 30);
-
-        this.lblComputerValue.Font =
-            new System.Drawing.Font(
-                "Segoe UI",
-                9F,
-                System.Drawing.FontStyle.Bold);
-
-        this.lblComputerValue.Text =
-            Environment.MachineName;
-
-        // User label
-
-        this.lblUserName.AutoSize = true;
-
-        this.lblUserName.Location =
-            new System.Drawing.Point(20, 65);
-
-        this.lblUserName.Text =
-            "User:";
-
-        // User value
-
-        this.lblUserValue.AutoSize = true;
-
-        this.lblUserValue.Location =
-            new System.Drawing.Point(150, 65);
-
-        this.lblUserValue.Font =
-            new System.Drawing.Font(
-                "Segoe UI",
-                9F,
-                System.Drawing.FontStyle.Bold);
-
-        this.lblUserValue.Text =
-            Environment.UserName;
-
-        // Add computer controls
-
-        this.grpComputer.Controls.Add(
-            this.lblComputerName);
-
-        this.grpComputer.Controls.Add(
-            this.lblComputerValue);
-
-        this.grpComputer.Controls.Add(
-            this.lblUserName);
-
-        this.grpComputer.Controls.Add(
-            this.lblUserValue);
-
-        // ==========================================
-        // START BUTTON
-        // ==========================================
-
-        this.btnStart.Location =
-            new System.Drawing.Point(30, 230);
-
-        this.btnStart.Size =
-            new System.Drawing.Size(230, 55);
-
-        this.btnStart.Text =
-            "START DIAGNOSTIC";
-
-        this.btnStart.Font =
-            new System.Drawing.Font(
-                "Segoe UI",
-                11F,
-                System.Drawing.FontStyle.Bold);
-
-        this.btnStart.Cursor =
-            System.Windows.Forms.Cursors.Hand;
-
-        this.btnStart.Click +=
-            new System.EventHandler(
-                this.btnStart_Click);
-
-        // ==========================================
-        // STOP BUTTON
-        // ==========================================
-
-        this.btnStop = new System.Windows.Forms.Button();
-        this.btnStop.Location =
-            new System.Drawing.Point(280, 230);
-
-        this.btnStop.Size =
-            new System.Drawing.Size(180, 55);
-
-        this.btnStop.Text =
-            "STOP";
-
-        this.btnStop.Font =
-            new System.Drawing.Font(
-                "Segoe UI",
-                11F,
-                System.Drawing.FontStyle.Bold);
-
-        this.btnStop.Cursor =
-            System.Windows.Forms.Cursors.Hand;
-
-        this.btnStop.Enabled = false;
-        this.btnStop.Click +=
-            new System.EventHandler(
-                this.btnStop_Click);
-
-        // ==========================================
-        // GENERATE REPORT
-        // ==========================================
-
-        this.btnGenerateReport = new System.Windows.Forms.Button();
-        this.btnGenerateReport.Location =
-            new System.Drawing.Point(480, 230);
-
-        this.btnGenerateReport.Size =
-            new System.Drawing.Size(210, 55);
-
-        this.btnGenerateReport.Text =
-            "GENERATE REPORT";
-
-        this.btnGenerateReport.Font =
-            new System.Drawing.Font(
-                "Segoe UI",
-                11F,
-                System.Drawing.FontStyle.Bold);
-
-        this.btnGenerateReport.Cursor =
-            System.Windows.Forms.Cursors.Hand;
-
-        this.btnGenerateReport.Enabled = false;
-        this.btnGenerateReport.Click +=
-            new System.EventHandler(
-                this.btnGenerateReport_Click);
-
-        // ==========================================
-        // EXPORT JSON
-        // ==========================================
-
-        this.btnExportJson = new System.Windows.Forms.Button();
-        this.btnExportJson.Location =
-            new System.Drawing.Point(710, 230);
-
-        this.btnExportJson.Size =
-            new System.Drawing.Size(160, 55);
-
-        this.btnExportJson.Text =
-            "EXPORT JSON";
-
-        this.btnExportJson.Font =
-            new System.Drawing.Font(
-                "Segoe UI",
-                11F,
-                System.Drawing.FontStyle.Bold);
-
-        this.btnExportJson.Cursor =
-            System.Windows.Forms.Cursors.Hand;
-
-        this.btnExportJson.Enabled = false;
-        this.btnExportJson.Click +=
-            new System.EventHandler(
-                this.btnExportJson_Click);
-
-        // ==========================================
-        // STATUS
-        // ==========================================
-
-        this.lblStatus.AutoSize = true;
-
-        this.lblStatus.Location =
-            new System.Drawing.Point(285, 248);
-
-        this.lblStatus.Font =
-            new System.Drawing.Font(
-                "Segoe UI",
-                10F);
-
-        this.lblStatus.Text =
-            "Status: Ready";
-
-        // ==========================================
-        // ELAPSED TIME
-        // ==========================================
-
-        this.lblElapsedTime = new System.Windows.Forms.Label();
-        this.lblElapsedTime.AutoSize = true;
-        this.lblElapsedTime.Location =
-            new System.Drawing.Point(30, 320);
-        this.lblElapsedTime.Font =
-            new System.Drawing.Font(
-                "Segoe UI",
-                10F);
-        this.lblElapsedTime.Text =
-            "Elapsed Time: 00:00:00";
-
-        // ==========================================
-        // RECOMMENDATION
-        // ==========================================
-
-        this.lblRecommendation = new System.Windows.Forms.Label();
-        this.lblRecommendation.AutoSize = true;
-        this.lblRecommendation.Location =
-            new System.Drawing.Point(280, 320);
-        this.lblRecommendation.Font =
-            new System.Drawing.Font(
-                "Segoe UI",
-                10F,
-                System.Drawing.FontStyle.Bold);
-        this.lblRecommendation.Text =
-            "Recommendation: N/A";
-
-        // ==========================================
-        // TIMER
-        // ==========================================
-
-        this.timerElapsed.Enabled = false;
-        this.timerElapsed.Interval = 1000;
-        this.timerElapsed.Tick +=
-            new System.EventHandler(
-                this.TimerElapsed_Tick);
-
-        // ==========================================
-        // PROGRESS BAR
-        // ==========================================
-
-        this.progressBar.Location =
-            new System.Drawing.Point(30, 350);
-
-        this.progressBar.Size =
-            new System.Drawing.Size(840, 25);
-
-        this.progressBar.Minimum = 0;
-
-        this.progressBar.Maximum = 100;
-
-        this.progressBar.Value = 0;
-
-        // ==========================================
-        // RESULT GROUP
-        // ==========================================
-
-        this.lblRequestId.AutoSize = true;
-        this.lblRequestId.Location =
-            new System.Drawing.Point(30, 345);
-        this.lblRequestId.Text =
-            "Request ID / Ticket Number:";
-        this.lblRequestId.Font =
-            new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-
-        this.txtRequestId.Location =
-            new System.Drawing.Point(30, 372);
-        this.txtRequestId.Size =
-            new System.Drawing.Size(250, 25);
-        this.txtRequestId.Font =
-            new System.Drawing.Font("Segoe UI", 10F);
-
-        this.lblRequestReason.AutoSize = true;
-        this.lblRequestReason.Location =
-            new System.Drawing.Point(30, 410);
-        this.lblRequestReason.Text =
-            "เหตุผลคำร้องขอ Upgrade:";
-        this.lblRequestReason.Font =
-            new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-
-        this.txtRequestReason.Location =
-            new System.Drawing.Point(30, 437);
-        this.txtRequestReason.Size =
-            new System.Drawing.Size(840, 75);
-        this.txtRequestReason.Multiline = true;
-        this.txtRequestReason.ScrollBars =
-            System.Windows.Forms.ScrollBars.Vertical;
-        this.txtRequestReason.Font =
-            new System.Drawing.Font("Segoe UI", 10F);
-        this.txtRequestReason.Text =
-            "ตัวอย่าง: เครื่องค้างและช้าเมื่อใช้งาน After Effect, ต้องการเพิ่ม RAM และเปลี่ยน HDD เป็น SSD M.2 สำหรับงานพัฒนาและทดสอบ";
-
-        this.lblApprovalCriteria.AutoSize = true;
-        this.lblApprovalCriteria.Location =
-            new System.Drawing.Point(30, 525);
-        this.lblApprovalCriteria.Text =
-            "เกณฑ์การอนุมัติที่ใช้:";
-        this.lblApprovalCriteria.Font =
-            new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-
-        this.txtApprovalCriteria.Location =
-            new System.Drawing.Point(30, 550);
-        this.txtApprovalCriteria.Size =
-            new System.Drawing.Size(840, 85);
-        this.txtApprovalCriteria.Multiline = true;
-        this.txtApprovalCriteria.ScrollBars =
-            System.Windows.Forms.ScrollBars.Vertical;
-        this.txtApprovalCriteria.ReadOnly = true;
-        this.txtApprovalCriteria.BackColor =
-            System.Drawing.Color.WhiteSmoke;
-        this.txtApprovalCriteria.Font =
-            new System.Drawing.Font("Segoe UI", 9F);
-        this.txtApprovalCriteria.Text =
-            "• คะแนนรวม 55 ขึ้นไปและมีหลักฐานชัดเจน: พิจารณาอนุมัติ\n" +
-            "• คำร้องขอเกี่ยวกับ RAM และ RAM < 16 GB พร้อมมีอาการช้า/งานหนัก: อนุมัติพิจารณาเพิ่ม RAM\n" +
-            "• คำร้องขอเกี่ยวกับ SSD/HDD และพื้นที่ดิสก์ว่าง < 20 GB พร้อมมีอาการช้า: อนุมัติพิจารณา SSD\n" +
-            "• คะแนนต่ำกว่าเกณฑ์หรือข้อมูลไม่เพียงพอ: ขอข้อมูลเพิ่มเติมก่อนอนุมัติ";
-
-        this.btnExportTxt.Location =
-            new System.Drawing.Point(30, 650);
-        this.btnExportTxt.Size =
-            new System.Drawing.Size(180, 35);
-        this.btnExportTxt.Text =
-            "Export TXT";
-        this.btnExportTxt.Click +=
-            new System.EventHandler(this.btnExportTxt_Click);
-
-        this.grpResult.Location =
-            new System.Drawing.Point(30, 705);
-
-        this.grpResult.Size =
-            new System.Drawing.Size(840, 120);
-
-        this.grpResult.Text =
-            "Diagnostic Result";
-
-        // ==========================================
-        // RESULT TEXTBOX
-        // ==========================================
-
-        this.txtResult.Location =
-            new System.Drawing.Point(15, 30);
-
-        this.txtResult.Size =
-            new System.Drawing.Size(810, 110);
-
-        this.txtResult.Multiline = true;
-
-        this.txtResult.ScrollBars =
-            System.Windows.Forms.ScrollBars.Vertical;
-
-        this.txtResult.ReadOnly = true;
-
-        this.txtResult.BackColor =
-            System.Drawing.Color.White;
-
-        this.txtResult.Font =
-            new System.Drawing.Font(
-                "Consolas",
-                10F);
-
-        this.txtResult.Text =
-            "รอการตรวจสอบ...\r\n\r\n" +
-            "กด START DIAGNOSTIC เพื่อเริ่มตรวจสอบเครื่อง";
-
-        // Add result textbox
-
-        this.grpResult.Controls.Add(
-            this.txtResult);
-
-        // ==========================================
-        // ADD CONTROLS TO FORM
-        // ==========================================
-
-        this.Controls.Add(
-            this.lblTitle);
-
-        this.Controls.Add(
-            this.lblSubtitle);
-
-        this.Controls.Add(
-            this.grpComputer);
-
-        this.Controls.Add(
-            this.btnStart);
-
-        this.Controls.Add(
-            this.lblStatus);
-
-        this.Controls.Add(
-            this.lblElapsedTime);
-
-        this.Controls.Add(
-            this.lblRecommendation);
-
-        this.Controls.Add(
-            this.progressBar);
-
-        this.Controls.Add(
-            this.btnStop);
-
-        this.Controls.Add(
-            this.btnGenerateReport);
-
-        this.Controls.Add(
-            this.btnExportJson);
-
-        this.Controls.Add(
-            this.lblRequestId);
-
-        this.Controls.Add(
-            this.txtRequestId);
-
-        this.Controls.Add(
-            this.lblRequestReason);
-
-        this.Controls.Add(
-            this.txtRequestReason);
-
-        this.Controls.Add(
-            this.lblApprovalCriteria);
-
-        this.Controls.Add(
-            this.txtApprovalCriteria);
-
-        this.Controls.Add(
-            this.btnExportTxt);
-
-        this.Controls.Add(
-            this.grpResult);
-
-        // ==========================================
-
-        this.grpComputer.ResumeLayout(false);
-        this.grpComputer.PerformLayout();
-
-        this.grpResult.ResumeLayout(false);
-        this.grpResult.PerformLayout();
-
-        this.ResumeLayout(false);
-        this.PerformLayout();
-
-        this.ResumeLayout(false);
-        this.PerformLayout();
+        components = new System.ComponentModel.Container();
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+        lblTitle = new Label();
+        lblSubtitle = new Label();
+        grpComputer = new GroupBox();
+        lblComputerName = new Label();
+        lblComputerValue = new Label();
+        lblUserName = new Label();
+        lblUserValue = new Label();
+        btnStart = new Button();
+        btnStop = new Button();
+        btnGenerateReport = new Button();
+        btnExportJson = new Button();
+        lblElapsedTime = new Label();
+        lblRecommendation = new Label();
+        timerElapsed = new System.Windows.Forms.Timer(components);
+        lblStatus = new Label();
+        progressBar = new ProgressBar();
+        grpResult = new GroupBox();
+        txtResult = new TextBox();
+        lblRequestReason = new Label();
+        txtRequestReason = new TextBox();
+        lblRequestId = new Label();
+        txtRequestId = new TextBox();
+        lblApprovalCriteria = new Label();
+        txtApprovalCriteria = new TextBox();
+        btnExportTxt = new Button();
+        grpComputer.SuspendLayout();
+        grpResult.SuspendLayout();
+        SuspendLayout();
+        // 
+        // lblTitle
+        // 
+        lblTitle.AutoSize = true;
+        lblTitle.BackColor = Color.White;
+        lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+        lblTitle.ForeColor = Color.ForestGreen;
+        lblTitle.Location = new Point(30, 25);
+        lblTitle.Name = "lblTitle";
+        lblTitle.Size = new Size(655, 46);
+        lblTitle.TabIndex = 0;
+        lblTitle.Text = "AIS SERVICECENTER DIAGNOSTIC TOOL";
+        // 
+        // lblSubtitle
+        // 
+        lblSubtitle.AutoSize = true;
+        lblSubtitle.Font = new Font("Segoe UI", 10F);
+        lblSubtitle.ForeColor = Color.DimGray;
+        lblSubtitle.Location = new Point(34, 65);
+        lblSubtitle.Name = "lblSubtitle";
+        lblSubtitle.Size = new Size(364, 23);
+        lblSubtitle.TabIndex = 1;
+        lblSubtitle.Text = "Computer Performance & Hardware Assessment";
+        // 
+        // grpComputer
+        // 
+        grpComputer.Controls.Add(lblComputerName);
+        grpComputer.Controls.Add(lblComputerValue);
+        grpComputer.Controls.Add(lblUserName);
+        grpComputer.Controls.Add(lblUserValue);
+        grpComputer.Location = new Point(30, 105);
+        grpComputer.Name = "grpComputer";
+        grpComputer.Size = new Size(840, 105);
+        grpComputer.TabIndex = 2;
+        grpComputer.TabStop = false;
+        grpComputer.Text = "Computer Information";
+        // 
+        // lblComputerName
+        // 
+        lblComputerName.AutoSize = true;
+        lblComputerName.Location = new Point(20, 30);
+        lblComputerName.Name = "lblComputerName";
+        lblComputerName.Size = new Size(129, 21);
+        lblComputerName.TabIndex = 0;
+        lblComputerName.Text = "Computer Name:";
+        // 
+        // lblComputerValue
+        // 
+        lblComputerValue.AutoSize = true;
+        lblComputerValue.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+        lblComputerValue.Location = new Point(150, 30);
+        lblComputerValue.Name = "lblComputerValue";
+        lblComputerValue.Size = new Size(119, 20);
+        lblComputerValue.TabIndex = 1;
+        lblComputerValue.Text = "CPADL2010194";
+        // 
+        // lblUserName
+        // 
+        lblUserName.AutoSize = true;
+        lblUserName.Location = new Point(20, 65);
+        lblUserName.Name = "lblUserName";
+        lblUserName.Size = new Size(45, 21);
+        lblUserName.TabIndex = 2;
+        lblUserName.Text = "User:";
+        // 
+        // lblUserValue
+        // 
+        lblUserValue.AutoSize = true;
+        lblUserValue.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+        lblUserValue.Location = new Point(150, 65);
+        lblUserValue.Name = "lblUserValue";
+        lblUserValue.Size = new Size(74, 20);
+        lblUserValue.TabIndex = 3;
+        lblUserValue.Text = "sakdas45";
+        // 
+        // btnStart
+        // 
+        btnStart.BackColor = Color.FromArgb(192, 64, 0);
+        btnStart.Cursor = Cursors.Hand;
+        btnStart.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+        btnStart.Location = new Point(30, 230);
+        btnStart.Name = "btnStart";
+        btnStart.Size = new Size(230, 55);
+        btnStart.TabIndex = 3;
+        btnStart.Text = "START DIAGNOSTIC";
+        btnStart.UseVisualStyleBackColor = false;
+        btnStart.Click += btnStart_Click;
+        // 
+        // btnStop
+        // 
+        btnStop.BackColor = Color.FromArgb(0, 192, 192);
+        btnStop.Cursor = Cursors.Hand;
+        btnStop.Enabled = false;
+        btnStop.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+        btnStop.Location = new Point(280, 230);
+        btnStop.Name = "btnStop";
+        btnStop.Size = new Size(180, 55);
+        btnStop.TabIndex = 8;
+        btnStop.Text = "STOP";
+        btnStop.UseVisualStyleBackColor = false;
+        btnStop.Click += btnStop_Click;
+        // 
+        // btnGenerateReport
+        // 
+        btnGenerateReport.BackColor = Color.FromArgb(0, 192, 192);
+        btnGenerateReport.Cursor = Cursors.Hand;
+        btnGenerateReport.Enabled = false;
+        btnGenerateReport.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+        btnGenerateReport.Location = new Point(480, 230);
+        btnGenerateReport.Name = "btnGenerateReport";
+        btnGenerateReport.Size = new Size(210, 55);
+        btnGenerateReport.TabIndex = 9;
+        btnGenerateReport.Text = "ส่งออกข้อมูล";
+        btnGenerateReport.UseVisualStyleBackColor = false;
+        btnGenerateReport.Click += btnGenerateReport_Click;
+        // 
+        // btnExportJson
+        // 
+        btnExportJson.BackColor = Color.FromArgb(0, 192, 192);
+        btnExportJson.Cursor = Cursors.Hand;
+        btnExportJson.Enabled = false;
+        btnExportJson.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+        btnExportJson.Location = new Point(710, 230);
+        btnExportJson.Name = "btnExportJson";
+        btnExportJson.Size = new Size(160, 55);
+        btnExportJson.TabIndex = 10;
+        btnExportJson.Text = "EXPORT JSON";
+        btnExportJson.UseVisualStyleBackColor = false;
+        btnExportJson.Click += btnExportJson_Click;
+        // 
+        // lblElapsedTime
+        // 
+        lblElapsedTime.AutoSize = true;
+        lblElapsedTime.Font = new Font("Segoe UI", 10F);
+        lblElapsedTime.Location = new Point(30, 320);
+        lblElapsedTime.Name = "lblElapsedTime";
+        lblElapsedTime.Size = new Size(181, 23);
+        lblElapsedTime.TabIndex = 5;
+        lblElapsedTime.Text = "Elapsed Time: 00:00:00";
+        // 
+        // lblRecommendation
+        // 
+        lblRecommendation.AutoSize = true;
+        lblRecommendation.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+        lblRecommendation.Location = new Point(280, 320);
+        lblRecommendation.Name = "lblRecommendation";
+        lblRecommendation.Size = new Size(194, 23);
+        lblRecommendation.TabIndex = 6;
+        lblRecommendation.Text = "Recommendation: N/A";
+        // 
+        // timerElapsed
+        // 
+        timerElapsed.Interval = 1000;
+        timerElapsed.Tick += TimerElapsed_Tick;
+        // 
+        // lblStatus
+        // 
+        lblStatus.AutoSize = true;
+        lblStatus.Font = new Font("Segoe UI", 10F);
+        lblStatus.Location = new Point(285, 248);
+        lblStatus.Name = "lblStatus";
+        lblStatus.Size = new Size(111, 23);
+        lblStatus.TabIndex = 4;
+        lblStatus.Text = "Status: Ready";
+        // 
+        // progressBar
+        // 
+        progressBar.Location = new Point(30, 350);
+        progressBar.Name = "progressBar";
+        progressBar.Size = new Size(840, 25);
+        progressBar.TabIndex = 7;
+        // 
+        // grpResult
+        // 
+        grpResult.Controls.Add(txtResult);
+        grpResult.Location = new Point(30, 705);
+        grpResult.Name = "grpResult";
+        grpResult.Size = new Size(840, 120);
+        grpResult.TabIndex = 18;
+        grpResult.TabStop = false;
+        grpResult.Text = "Diagnostic Result";
+        // 
+        // txtResult
+        // 
+        txtResult.BackColor = Color.White;
+        txtResult.Font = new Font("Consolas", 10F);
+        txtResult.Location = new Point(15, 30);
+        txtResult.Multiline = true;
+        txtResult.Name = "txtResult";
+        txtResult.ReadOnly = true;
+        txtResult.ScrollBars = ScrollBars.Vertical;
+        txtResult.Size = new Size(810, 110);
+        txtResult.TabIndex = 0;
+        txtResult.Text = "รอการตรวจสอบ...\r\n\r\nกด START DIAGNOSTIC เพื่อเริ่มตรวจสอบเครื่อง";
+        // 
+        // lblRequestReason
+        // 
+        lblRequestReason.AutoSize = true;
+        lblRequestReason.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+        lblRequestReason.Location = new Point(30, 410);
+        lblRequestReason.Name = "lblRequestReason";
+        lblRequestReason.Size = new Size(210, 23);
+        lblRequestReason.TabIndex = 13;
+        lblRequestReason.Text = "เหตุผลคำร้องขอ Upgrade:";
+        // 
+        // txtRequestReason
+        // 
+        txtRequestReason.BackColor = SystemColors.Menu;
+        txtRequestReason.Font = new Font("Segoe UI", 10F);
+        txtRequestReason.Location = new Point(30, 437);
+        txtRequestReason.Multiline = true;
+        txtRequestReason.Name = "txtRequestReason";
+        txtRequestReason.ScrollBars = ScrollBars.Vertical;
+        txtRequestReason.Size = new Size(840, 75);
+        txtRequestReason.TabIndex = 14;
+        txtRequestReason.Text = "กรอกเหตุผลในการขอเพิ่ม RAM";
+        txtRequestReason.TextChanged += txtRequestReason_TextChanged;
+        // 
+        // lblRequestId
+        // 
+        lblRequestId.AutoSize = true;
+        lblRequestId.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+        lblRequestId.Location = new Point(30, 345);
+        lblRequestId.Name = "lblRequestId";
+        lblRequestId.Size = new Size(241, 23);
+        lblRequestId.TabIndex = 11;
+        lblRequestId.Text = "Request ID / Ticket Number:";
+        // 
+        // txtRequestId
+        // 
+        txtRequestId.Font = new Font("Segoe UI", 10F);
+        txtRequestId.Location = new Point(30, 372);
+        txtRequestId.Name = "txtRequestId";
+        txtRequestId.Size = new Size(250, 30);
+        txtRequestId.TabIndex = 12;
+        // 
+        // lblApprovalCriteria
+        // 
+        lblApprovalCriteria.AutoSize = true;
+        lblApprovalCriteria.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+        lblApprovalCriteria.Location = new Point(30, 525);
+        lblApprovalCriteria.Name = "lblApprovalCriteria";
+        lblApprovalCriteria.Size = new Size(168, 23);
+        lblApprovalCriteria.TabIndex = 15;
+        lblApprovalCriteria.Text = "เกณฑ์การอนุมัติที่ใช้:";
+        // 
+        // txtApprovalCriteria
+        // 
+        txtApprovalCriteria.BackColor = Color.WhiteSmoke;
+        txtApprovalCriteria.Font = new Font("Segoe UI", 9F);
+        txtApprovalCriteria.Location = new Point(30, 550);
+        txtApprovalCriteria.Multiline = true;
+        txtApprovalCriteria.Name = "txtApprovalCriteria";
+        txtApprovalCriteria.ReadOnly = true;
+        txtApprovalCriteria.ScrollBars = ScrollBars.Vertical;
+        txtApprovalCriteria.Size = new Size(840, 85);
+        txtApprovalCriteria.TabIndex = 16;
+        txtApprovalCriteria.Text = resources.GetString("txtApprovalCriteria.Text");
+        txtApprovalCriteria.TextChanged += txtApprovalCriteria_TextChanged;
+        // 
+        // btnExportTxt
+        // 
+        btnExportTxt.BackColor = Color.Gray;
+        btnExportTxt.Location = new Point(30, 650);
+        btnExportTxt.Name = "btnExportTxt";
+        btnExportTxt.Size = new Size(180, 35);
+        btnExportTxt.TabIndex = 17;
+        btnExportTxt.Text = "Export TXT";
+        btnExportTxt.UseVisualStyleBackColor = false;
+        btnExportTxt.Click += btnExportTxt_Click;
+        // 
+        // Form1
+        // 
+        AutoScaleDimensions = new SizeF(9F, 21F);
+        AutoScaleMode = AutoScaleMode.Font;
+        ClientSize = new Size(882, 813);
+        Controls.Add(lblTitle);
+        Controls.Add(lblSubtitle);
+        Controls.Add(grpComputer);
+        Controls.Add(btnStart);
+        Controls.Add(lblStatus);
+        Controls.Add(lblElapsedTime);
+        Controls.Add(lblRecommendation);
+        Controls.Add(progressBar);
+        Controls.Add(btnStop);
+        Controls.Add(btnGenerateReport);
+        Controls.Add(btnExportJson);
+        Controls.Add(lblRequestId);
+        Controls.Add(txtRequestId);
+        Controls.Add(lblRequestReason);
+        Controls.Add(txtRequestReason);
+        Controls.Add(lblApprovalCriteria);
+        Controls.Add(txtApprovalCriteria);
+        Controls.Add(btnExportTxt);
+        Controls.Add(grpResult);
+        MinimumSize = new Size(900, 860);
+        Name = "Form1";
+        StartPosition = FormStartPosition.CenterScreen;
+        Text = "AIS SERVICECENTER";
+        grpComputer.ResumeLayout(false);
+        grpComputer.PerformLayout();
+        grpResult.ResumeLayout(false);
+        grpResult.PerformLayout();
+        ResumeLayout(false);
+        PerformLayout();
     }
 
     #endregion
