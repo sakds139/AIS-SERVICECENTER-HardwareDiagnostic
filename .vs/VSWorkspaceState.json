@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\HardwareDiagnostic",
+    "\\HardwareDiagnostic.Tests",
+    "\\HardwareDiagnostic.Tests\\bin",
+    "\\HardwareDiagnostic\\bin\\Release\\net8.0-windows"
+  ],
+  "PreviewInSolutionExplorer": false
+}

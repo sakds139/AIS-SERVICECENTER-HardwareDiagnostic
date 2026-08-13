@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "HardwareDiagnostic": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\ITTools"
+    }
+  }
+}

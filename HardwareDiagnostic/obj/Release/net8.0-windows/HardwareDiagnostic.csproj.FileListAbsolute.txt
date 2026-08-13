@@ -1,0 +1,16 @@
+C:\ITTools\HardwareDiagnostic\bin\Release\net8.0-windows\HardwareDiagnostic.exe
+C:\ITTools\HardwareDiagnostic\bin\Release\net8.0-windows\HardwareDiagnostic.deps.json
+C:\ITTools\HardwareDiagnostic\bin\Release\net8.0-windows\HardwareDiagnostic.runtimeconfig.json
+C:\ITTools\HardwareDiagnostic\bin\Release\net8.0-windows\HardwareDiagnostic.dll
+C:\ITTools\HardwareDiagnostic\bin\Release\net8.0-windows\HardwareDiagnostic.pdb
+C:\ITTools\HardwareDiagnostic\bin\Release\net8.0-windows\System.Management.dll
+C:\ITTools\HardwareDiagnostic\bin\Release\net8.0-windows\runtimes\win\lib\net8.0\System.Management.dll
+C:\ITTools\HardwareDiagnostic\obj\Release\net8.0-windows\HardwareDiagnostic.csproj.AssemblyReference.cache
+C:\ITTools\HardwareDiagnostic\obj\Release\net8.0-windows\HardwareDiagnostic.GeneratedMSBuildEditorConfig.editorconfig
+C:\ITTools\HardwareDiagnostic\obj\Release\net8.0-windows\HardwareDiagnostic.csproj.CoreCompileInputs.cache
+C:\ITTools\HardwareDiagnostic\obj\Release\net8.0-windows\Hardware.F399D7AE.Up2Date
+C:\ITTools\HardwareDiagnostic\obj\Release\net8.0-windows\HardwareDiagnostic.dll
+C:\ITTools\HardwareDiagnostic\obj\Release\net8.0-windows\refint\HardwareDiagnostic.dll
+C:\ITTools\HardwareDiagnostic\obj\Release\net8.0-windows\HardwareDiagnostic.pdb
+C:\ITTools\HardwareDiagnostic\obj\Release\net8.0-windows\HardwareDiagnostic.genruntimeconfig.cache
+C:\ITTools\HardwareDiagnostic\obj\Release\net8.0-windows\ref\HardwareDiagnostic.dll

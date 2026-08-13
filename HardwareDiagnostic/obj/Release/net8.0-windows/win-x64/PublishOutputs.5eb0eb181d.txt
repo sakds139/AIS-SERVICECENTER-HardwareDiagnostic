@@ -1,0 +1,2 @@
+C:\ITTools\HardwareDiagnostic\bin\Release\net8.0-windows\win-x64\publish\HardwareDiagnostic.pdb
+C:\ITTools\HardwareDiagnostic\bin\Release\net8.0-windows\win-x64\publish\HardwareDiagnostic.exe
