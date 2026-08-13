@@ -8,6 +8,7 @@ C:\ITTools\HardwareDiagnostic\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\S
 C:\ITTools\HardwareDiagnostic\obj\Debug\net8.0-windows\HardwareDiagnostic.csproj.AssemblyReference.cache
 C:\ITTools\HardwareDiagnostic\obj\Debug\net8.0-windows\HardwareDiagnostic.GeneratedMSBuildEditorConfig.editorconfig
 C:\ITTools\HardwareDiagnostic\obj\Debug\net8.0-windows\HardwareDiagnostic.csproj.CoreCompileInputs.cache
+C:\ITTools\HardwareDiagnostic\obj\Debug\net8.0-windows\HardwareDiagnostic.sourcelink.json
 C:\ITTools\HardwareDiagnostic\obj\Debug\net8.0-windows\Hardware.F399D7AE.Up2Date
 C:\ITTools\HardwareDiagnostic\obj\Debug\net8.0-windows\HardwareDiagnostic.dll
 C:\ITTools\HardwareDiagnostic\obj\Debug\net8.0-windows\refint\HardwareDiagnostic.dll

@@ -472,3 +472,4 @@ C:\ITTools\HardwareDiagnostic\obj\Release\net8.0-windows\win-x64\refint\Hardware
 C:\ITTools\HardwareDiagnostic\obj\Release\net8.0-windows\win-x64\HardwareDiagnostic.pdb
 C:\ITTools\HardwareDiagnostic\obj\Release\net8.0-windows\win-x64\HardwareDiagnostic.genruntimeconfig.cache
 C:\ITTools\HardwareDiagnostic\obj\Release\net8.0-windows\win-x64\ref\HardwareDiagnostic.dll
+C:\ITTools\HardwareDiagnostic\obj\Release\net8.0-windows\win-x64\HardwareDiagnostic.sourcelink.json
