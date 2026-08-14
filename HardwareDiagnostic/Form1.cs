@@ -3,6 +3,8 @@ using System.Text.Json;
 using HardwareDiagnostic.Models;
 using HardwareDiagnostic.Services;
 
+using HardwareDiagnostic.Aisc.Services;
+
 namespace HardwareDiagnostic;
 
 public partial class Form1 : Form
@@ -70,8 +72,10 @@ public partial class Form1 : Form
             lblRecommendation.Text = $"Recommendation: {upgradeReport.Verdict}";
 
             ShowResult(info, report, upgradeReport, requestId);
+
+            AnalyzeAiscTicket();
+
             btnGenerateReport.Enabled = true;
-            btnExportJson.Enabled = true;
         }
         catch (OperationCanceledException)
         {
@@ -450,10 +454,90 @@ Prompt สำหรับ AI / Support Review
     {
 
     }
+    private void AnalyzeAiscTicket()
+    {
+        if (_currentInfo == null)
+        {
+            return;
+        }
 
+        try
+        {
+            var parser =
+                new TicketParserService();
+
+            var ticket =
+                parser.Parse(txtRequestReason.Text);
+
+            var workloadService =
+                new WorkloadAnalyzerService();
+
+            var workload =
+                workloadService.Analyze(
+                    ticket.Reason);
+
+            var approvalService =
+                new ApprovalDecisionService();
+
+            var result =
+                approvalService.Analyze(
+                    ticket,
+                    _currentInfo,
+                    workload);
+
+            txtResult.AppendText(
+    $"""
+
+
+
+========================================
+AISC ANALYSIS
+========================================
+
+Ticket
+{ticket.TicketNo}
+
+Employee ID
+{ticket.EmployeeId}
+
+Employee
+{ticket.EmployeeName}
+
+ComID
+{ticket.ComId}
+
+Workload
+{workload}
+
+Decision
+{result.Decision}
+
+Priority
+{result.Priority}
+
+Score
+{result.Score}
+
+Evidence
+----------------------------------------
+{string.Join(Environment.NewLine, result.Evidence)}
+
+Recommendations
+----------------------------------------
+{string.Join(Environment.NewLine, result.Recommendations)}
+
+========================================
+
+""");
+        }
+        catch (Exception ex)
+        {
+            txtResult.AppendText(
+                $"\nAISC Error : {ex.Message}");
+        }
+    }
     private void txtRequestReason_TextChanged(object sender, EventArgs e)
     {
 
     }
 }
-
